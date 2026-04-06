@@ -1,0 +1,320 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Fond noir comme sur ta capture */
+    color: whitesmoke;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HEADER --- */
+.hero-header {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-color: #000;
+}
+
+.hero-photo, .hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%; /* Centrage vertical parfait */
+    left: 50%; /* Centrage horizontal parfait */
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #f5f5f5;
+    margin: 0;
+}
+
+/* --- LIGNE DE SÉPARATION --- */
+.separator-line {
+    width: 60%;          /* La ligne ne fait pas toute la largeur pour plus de style */
+    max-width: 800px;    /* Elle s'aligne sur la largeur de ton texte */
+    height: 1px;         /* Très fine */
+    background-color: whitesmoke; 
+    margin: 0 auto;      /* Centre la ligne horizontalement */
+    display: block;
+}
+
+/* --- NAV FUSIONNÉE (NOIRE AVEC TEXTE BLANC) --- */
+.full-nav {
+    width: 100%;
+    background-color: #000; /* On change le beige en noir */
+    padding: 30px 0; /* Un peu d'espace pour respirer */
+    display: flex;
+    justify-content: center;
+    border: none; /* On s'assure qu'il n'y a pas de bordure */
+    margin-top: 0; /* Force la fusion avec le header */
+}
+
+.full-nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.full-nav a {
+    text-decoration: none;
+    color: #fff; /* Titres en blanc */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: opacity 0.3s ease;
+}
+
+.full-nav a:hover {
+    opacity: 0.7; /* Petit effet au survol */
+}
+
+/* --- SECTION INTRODUCTION --- */
+.intro-section {
+    background-color: #000; /* Fond noir pour fusionner avec le reste */
+    padding: 80px 20px 40px 20px; /* Marges : haut, droite, bas, gauche */
+    text-align: center;
+    color: white;
+    padding-top: 40px;
+}
+
+.intro-content {
+    max-width: 800px; /* On limite la largeur pour que le texte soit facile à lire */
+    margin: 0 auto; /* Centre le bloc de texte */
+}
+
+.intro-title {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.intro-description {
+    font-size: 1.1rem;
+    line-height: 1.8; /* Espace entre les lignes pour plus de confort */
+    color: #ccc; /* Gris clair pour ne pas agresser l'œil par rapport au titre */
+    font-weight: 300;
+}
+
+/* Ajustement de la galerie pour qu'elle soit un peu plus proche du texte */
+.gallery-container {
+    background-color: #000;
+    padding: 20px 20px 100px 20px;
+}
+
+.gallery-grid {
+    /* Cet effet "colonnes" permet aux images de s'imbriquer comme sur ta capture */
+    column-count: 3; 
+    column-gap: 15px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    width: 100%;
+    display: block;
+    margin-bottom: 15px; /* Espace vertical entre les images */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+/* Lightbox pour l'agrandissement */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content { 
+    max-width: 90%; 
+    max-height: 90%; 
+}
+.close-btn { 
+    position: absolute; 
+    top: 20px; 
+    right: 30px; 
+    color: white; 
+    font-size: 40px; 
+    cursor: pointer; 
+}
+
+/*PAGE INDEX*/
+.about-container {
+    max-width: 1200px; /* Largeur maximale pour ne pas que le texte s'étale trop */
+    margin: 60px auto; /* Centre le bloc et ajoute de l'espace en haut/bas */
+    padding: 0 40px;
+}
+
+.about-content {
+    display: flex;         /* Active les colonnes côte à côte */
+    align-items: flex-start; /* Aligne le texte en haut de l'image */
+    gap: 50px;             /* Espace entre l'image et le texte */
+}
+
+/* Style de la colonne Image */
+.about-image {
+    flex: 1;               /* Prend une part égale de largeur */
+}
+
+.about-image img {
+    width: 100%;           /* L'image prend toute la largeur de sa colonne */
+    height: auto;
+    display: block;
+    margin-bottom: 250px;
+    transition: transform 0.3s ease;
+}
+
+/* Style de la colonne Texte */
+.about-text {
+    flex: 1;               /* Prend l'autre part de largeur */
+    color: #ffffff;        /* Texte blanc */
+    font-family: 'Helvetica', Arial, sans-serif;
+    line-height: 1.6;      /* Espace entre les lignes pour la lisibilité */
+    font-size: 1.05rem;
+}
+
+.about-text p {
+    margin-bottom: 20px;   /* Espace entre chaque paragraphe */
+}
+
+.about-text ul {
+    margin-top: 15px;
+    padding-left: 20px;
+    list-style-type: square; /* Des petits carrés pour le style artistique */
+    color: #ccc;
+}
+
+.about-text li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.about-text strong {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/*PAGE CONTACT*/
+.contact-container {
+    flex: 1; 
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: flex-start; /* Aligne le texte vers le haut */
+    padding: 60px 20px;
+}
+
+.contact-info {
+    max-width: 600px;
+    width: 100%;
+    text-align: left; /* Comme sur ta capture */
+}
+
+.contact-info h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.contact-info p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.social-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #000;
+}
+
+.social-section h2 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    color: #f5f5f5;
+    margin-bottom: 25px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espace entre les deux icônes */
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #666; /* Gris discret par défaut */
+    font-size: 2rem; /* Taille des icônes */
+    transition: all 0.3s ease; /* Animation douce */
+}
+
+/* Effet au survol : les icônes deviennent blanches et remontent un peu */
+.social-icons a:hover {
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #000;      /* Noir pur pour fusionner avec le fond */
+    color: #666;                 /* Gris discret pour ne pas distraire du contenu */
+    padding: 60px 0 40px 0;      /* Plus d'espace en haut pour bien respirer */
+    text-align: center;
+    border-top: 1px solid #1a1a1a; /* Ligne de séparation très sombre et élégante */
+    margin-top: 80px;
+}
+
+/* Responsive : passer à 2 colonnes sur tablette et 1 sur mobile */
+@media (max-width: 1000px) { 
+    .gallery-grid { column-count: 2; } 
+}
+
+@media (max-width: 600px) { 
+    .gallery-grid { column-count: 1; } 
+}
+
+
+/*PAGE INDEX*/
+@media (max-width: 900px) {
+    .about-content {
+        flex-direction: column; /* Empile l'image et le texte verticalement */
+        align-items: center;
+        text-align: center;
+    }
+    
+    .about-image {
+        width: 100%;
+        max-width: 500px; /* Évite que l'image soit trop géante sur mobile */
+        margin-bottom: 30px;
+    }
+
+    .about-image img {
+        margin-bottom: 20px;
+    }
+}
