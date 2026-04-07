@@ -279,6 +279,64 @@ body, html {
     transform: translateY(-5px);
 }
 
+/*PAGE GALERIE*/
+/* Container principal */
+.portfolio-selection {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.selection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover {
+    opacity: 0.8;
+}
+
+.project-image img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Force le format carré */
+    object-fit: cover;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.project-info h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.project-title-container {
+    text-align: center;
+    padding: 40px 0 20px 0; /* Espace au dessus et en dessous */
+    background-color: black; /* Pour rester raccord avec ton site */
+}
+
+#galerie-titre {
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: 300;
+    margin: 0;
+}
+
+
 /* Footer */
 footer {
     width: 100%;
@@ -300,7 +358,6 @@ footer {
 }
 
 
-/*PAGE INDEX*/
 @media (max-width: 900px) {
     .about-content {
         flex-direction: column; /* Empile l'image et le texte verticalement */
