@@ -22,83 +22,64 @@ lightbox.addEventListener('click', (e) => {
 
 
 /*PAGE GALERIE*/
+/* --- CONFIGURATION DES PROJETS --- */
 const projets = {
     "ici": {
         titre: "Paysages d'ici",
-        images: ["DSCF1247.webp", "DSCF1247.webp", "DSCF1247.webp"]
+        images: ["DSCF1230.webp", "DSCF1247.webp", "DSCF1406.webp"]
     },
     "ailleurs": {
         titre: "Paysages d'ailleurs",
-        images: ["DSCF1247.webp", "DSCF1247.webp", "DSCF1247.webp"]
+        images: ["DSCF1583.webp", "DSCF1585.webp", "DSCF1595.webp"]
     },
     "cite": {
         titre: "Au cœur de la cité",
-        images: ["DSCF1247.webp", "DSCF1247.webp", "DSCF1247.webp"]
+        images: ["DSCF1464.webp", "DSCF4156.webp", "DSCF6426.webp"]
     },
     "ocean": {
         titre: "Au bord de l'océan",
-        images: ["DSCF1247.webp", "DSCF1247.webp", "DSCF1247.webp"]
+        images: ["DSCF6670.webp", "DSCF6729.webp", "DSCF7320_1.webp"]
     }
 };
 
-/* --- AFFICHAGE DYNAMIQUE --- */
+/* --- 1. AFFICHAGE DYNAMIQUE DE LA GALERIE --- */
 const params = new URLSearchParams(window.location.search);
 const nomProjet = params.get('projet');
 
 const container = document.getElementById('gallery-container');
-const titrePage = document.getElementById('galerie-titre');
 const titreDynamique = document.getElementById('galerie-titre');
 
-
-if (nomProjet && projets[nomProjet]) {
-    const data = projets[nomProjet];
-    if (titrePage) titrePage.innerText = data.titre;
-    
-    const desc = document.getElementById('galerie-description');
-    if (desc) desc.innerText = data.description;
-
-    if (container) {
-        container.innerHTML = ""; // On vide
-        data.images.forEach(imgUrl => {
-            const img = document.createElement('img');
-            img.src = imgUrl; // Vérifie bien les noms de fichiers sur GitHub !
-            img.classList.add('gallery-item');
-            container.appendChild(img);
-        });
-    }
-}
-
 if (nomProjet && projets[nomProjet]) {
     const data = projets[nomProjet];
     
-    // On écrit le titre (ex: "Paysages d'ici")
+    // Mise à jour du titre
     if (titreDynamique) {
         titreDynamique.innerText = data.titre;
     }
 
-    // On remplit les images
+    // Remplissage des images
     if (container) {
-        container.innerHTML = ""; 
+        container.innerHTML = ""; // On vide le "Chargement..."
         data.images.forEach(imgUrl => {
             const img = document.createElement('img');
             img.src = imgUrl;
             img.classList.add('gallery-item');
+            img.alt = data.titre;
             container.appendChild(img);
         });
     }
 }
 
-// Marches pour toutes les images avec la classe gallery-item
+// On utilise document.addEventListener pour que ça marche même sur les images créées par le JS
 document.addEventListener('click', (e) => {
+    // CLIC SUR UNE IMAGE
     if (e.target.classList.contains('gallery-item')) {
         lightbox.style.display = 'flex';
         lightboxImg.src = e.target.src;
     }
-});
-
-// Fermeture
-document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('close-btn') || (e.target === lightbox)) {
+    
+    // CLIC POUR FERMER (sur la croix ou à côté de l'image)
+    if (e.target.classList.contains('close-btn') || e.target === lightbox) {
         lightbox.style.display = 'none';
     }
 });
