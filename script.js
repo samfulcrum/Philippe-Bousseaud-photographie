@@ -22,7 +22,6 @@ lightbox.addEventListener('click', (e) => {
 
 
 /*PAGE GALERIE*/
-/* --- CONFIGURATION DES PROJETS --- */
 const projets = {
     "ici": {
         titre: "Paysages d'ici",
@@ -42,7 +41,6 @@ const projets = {
     }
 };
 
-/* --- 1. AFFICHAGE DYNAMIQUE DE LA GALERIE --- */
 const params = new URLSearchParams(window.location.search);
 const nomProjet = params.get('projet');
 
