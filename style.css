@@ -336,6 +336,22 @@ body, html {
     margin: 0;
 }
 
+.project-description {
+    max-width: 800px;    /* On limite la largeur pour la lecture */
+    margin: 20px auto;   /* On centre le bloc */
+    color: #ccc;         /* Gris clair */
+    line-height: 1.6;    /* Espace entre les lignes */
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0 20px;
+}
+
+#galerie-description {
+    white-space: pre-line; /* Cela respecte les sauts de ligne du texte JS */
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+}
 
 /* Footer */
 footer {
