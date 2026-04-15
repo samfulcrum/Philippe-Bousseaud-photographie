@@ -65,7 +65,7 @@ if (nomProjet && projets[nomProjet]) {
         container.innerHTML = ""; 
         data.images.forEach(imgUrl => {
             const img = document.createElement('img');
-            img.src = imgUrl.includes('/') ? imgUrl : nomProjet + "/" + imgUrl;
+            img.src = nomProjet + "/" + imgUrl;
             img.classList.add('gallery-item');
             container.appendChild(img);
         });
