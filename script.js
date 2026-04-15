@@ -25,22 +25,18 @@ lightbox.addEventListener('click', (e) => {
 const projets = {
     "ici": {
         titre: "Paysages d'ici",
-        description: ``,
         images: ["DSCF1247.webp", "DSCF1247.webp", "DSCF1247.webp"]
     },
     "ailleurs": {
         titre: "Paysages d'ailleurs",
-        description: ``,
         images: ["DSCF1247.webp", "DSCF1247.webp", "DSCF1247.webp"]
     },
     "cite": {
         titre: "Au cœur de la cité",
-        description: ``,
         images: ["DSCF1247.webp", "DSCF1247.webp", "DSCF1247.webp"]
     },
     "ocean": {
         titre: "Au bord de l'océan",
-        description: ``,
         images: ["DSCF1247.webp", "DSCF1247.webp", "DSCF1247.webp"]
     }
 };
@@ -51,7 +47,6 @@ const nomProjet = params.get('projet');
 
 const container = document.getElementById('gallery-container');
 const titreDynamique = document.getElementById('galerie-titre');
-const descDynamique = document.getElementById('galerie-description'); 
 
 
 if (nomProjet && projets[nomProjet]) {
@@ -62,9 +57,6 @@ if (nomProjet && projets[nomProjet]) {
         titreDynamique.innerText = data.titre;
     }
 
-    if (descDynamique) {
-        descDynamique.innerText = data.description || "";
-    }
 
     // On remplit les images
     if (container) {
