@@ -38,9 +38,9 @@ const projets = {
     "ocean": {
         titre: "Au bord de l'océan",
         images: ["BPA7220.webp", "BPB4893.webp", "BPD1829.webp", "BPE2723.webp", "BPF8436.webp",
-            "BPF8514.webp", "BPF85257.webp", "BPF94258.webp", "BPG1753.webp", "BPG1768.webp",
-        "BPG1801.webp", "BPG1862.webp", "BPG1874.webp", "BPG1988.webp", "BPG9433.webp", 
-    "DSCF9336.webp", "DSCF9443.webp", "DSCF9467.webp", "DSCF9522.webp", "F1000075.webp"]
+                "BPF8514.webp", "BPF85257.webp", "BPF94258.webp", "BPG1753.webp", "BPG1768.webp",
+                "BPG1801.webp", "BPG1862.webp", "BPG1874.webp", "BPG1988.webp", "BPG9433.webp", 
+                "DSCF9336.webp", "DSCF9443.webp", "DSCF9467.webp", "DSCF9522.webp", "F1000075.webp"]
     }
 };
 
