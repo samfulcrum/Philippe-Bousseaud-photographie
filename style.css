@@ -308,8 +308,8 @@ body, html {
 
 .project-image img {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Force le format carré */
-    object-fit: cover;
+    height: 350px;
+    object-fit: contain;
     display: block;
     margin-bottom: 15px;
 }
