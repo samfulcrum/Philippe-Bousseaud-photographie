@@ -354,7 +354,18 @@ footer {
 }
 
 @media (max-width: 600px) { 
-    .gallery-grid { column-count: 1; } 
+    .gallery-grid { 
+        column-count: 1; 
+    } 
+    .full-nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 10px;
+    }
+    .full-nav a {
+        font-size: 12px;
+    }
 }
 
 
