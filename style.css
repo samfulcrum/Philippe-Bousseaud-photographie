@@ -303,6 +303,7 @@ body, html {
     flex-direction: column;
     align-items: center; /* Centre les images et les titres */
     text-align: center;
+    text-decoretion: none;
 }
 
 .project-card:hover {
