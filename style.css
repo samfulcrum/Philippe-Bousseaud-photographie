@@ -303,11 +303,16 @@ body, html {
     flex-direction: column;
     align-items: center; /* Centre les images et les titres */
     text-align: center;
-    text-decoretion: none;
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 .project-card:hover {
     opacity: 0.8;
+}
+
+.project-card:visited {
+    color: white; 
 }
 
 .project-image img {
@@ -323,6 +328,8 @@ body, html {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: bold;
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 .project-title-container {
