@@ -357,18 +357,35 @@ footer {
     } 
     .full-nav ul {
         gap: 15px;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         padding: 0 10px;
     }
     .full-nav a {
-        font-size: 12px;
+        font-size: 11px;
     }
     .project-image img {
         height: 250px; /* Réduit la hauteur sur petit écran */
     }
     .hero-content h1 {
-        font-size: 2.5rem; /* Réduit la taille du titre principal */
+        font-size: 1.8rem; /* Réduit la taille du titre principal */
+        letter-spacing: 2px;
+        padding: 0 10px;
+        width: 100vw;
+    }
+    .hero-header {
+        height: 60vh;
+    }
+    .selection-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .project-image img {
+        height: auto; /* Laisse l'image prendre sa forme naturelle */
+        max-height: 300px;
     }
 }
 
