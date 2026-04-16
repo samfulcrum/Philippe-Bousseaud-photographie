@@ -33,7 +33,10 @@ const projets = {
     },
     "cite": {
         titre: "Au cœur de la cité",
-        images: ["DSCF1247.webp", "DSCF1247.webp", "DSCF1247.webp"]
+        images: ["17A1718.webp", "17B5614.webp", "17B5688.webp", "17B8433.webp", "BPA1211.webp",
+                "BPA1236.webp", "BPA1445.webp", "BPA1918.webp", "BPA3955.webp", "BPB3426.webp",
+                "BPC6896.webp", "BPD3154.webp", "BPD4122.webp", "BPE0769.webp", "BPE4795.webp",
+                "DSCF8288.webp", "DSCF8497.webp", "DSCF8547.webp", "DSCF8668.webp", "PBE4798.webp"]
     },
     "ocean": {
         titre: "Au bord de l'océan",
