@@ -32,7 +32,7 @@ const projets = {
     },
     "ailleurs": {
         titre: "Paysages d'ailleurs",
-        images: ["BPA3585.webp", "PBA3619.webp", "BPF2914.webp", "BPF3772.webp", "BPF4016.webp", "BPF4498.webp",
+        images: ["BPA3585.webp", "BPA3619.webp", "BPF2914.webp", "BPF3772.webp", "BPF4016.webp", "BPF4498.webp",
                 "BPF5291.webp", "BPF5658.webp", "BPF753.webp", "DSCF3587.webp", "BPF5706.webp", "BPF5863.webp",
                 "000005.webp", "000011.webp", "D1000006.webp", "D1000007.webp", "BPGH6.webp", "BPGF5.webp",
                 "BPFG4.webp", "000004.webp"]
