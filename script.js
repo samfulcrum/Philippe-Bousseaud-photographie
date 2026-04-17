@@ -25,11 +25,17 @@ lightbox.addEventListener('click', (e) => {
 const projets = {
     "ici": {
         titre: "Paysages d'ici",
-        images: ["DSCF1247.webp", "DSCF1247.webp", "DSCF1247.webp"]
+        images: ["17B6000.webp", "BPH1960.webp", "BPH4254.webp", "BPH5294.webp", "DSC0104.webp",
+                "DSCF0.webp", "DSCF0024.webp", "DSCF0834.webp", "DSCF1099.webp", "DSCF2377.webp",
+                "DSCF4299.webp", "DSCF4628.webp", "DSCF6549.webp", "DSCF6566.webp", "DSCF6664.webp",
+                "DSCF6909.webp", "DSCF7028.webp", "DSCF7392.webp", "PBG6062.webp", "PBG6188.webp"]
     },
     "ailleurs": {
         titre: "Paysages d'ailleurs",
-        images: ["DSCF1247.webp", "DSCF1247.webp", "DSCF1247.webp"]
+        images: ["BPA3585.webp", "PBA3619.webp", "BPF2914.webp", "BPF3772.webp", "BPF4016.webp", "BPF4498.webp",
+                "BPF5291.webp", "BPF5658.webp", "BPF753.webp", "DSCF3587.webp", "BPF5706.webp", "BPF5863.webp",
+                "000005.webp", "000011.webp", "D1000006.webp", "D1000007.webp", "BPGH6.webp", "BPGF5.webp",
+                "BPFG4.webp", "000004.webp"]
     },
     "cite": {
         titre: "Au cœur de la cité",
